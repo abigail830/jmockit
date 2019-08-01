@@ -28,5 +28,8 @@ public class AnOrdinaryClassWithBlockTest {
         assertTrue(AnOrdinaryClassWithBlock.j == 0);
         // 构造函数和初始代码块被mock
         assertTrue(instance.getI() == 0);
+
+        //This would be null pointer
+        //assertTrue(AnOrdinaryClassWithBlock.anOrdinaryClass.callPrivateMethod() == 4);
     }
 }

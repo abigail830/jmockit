@@ -1,9 +1,15 @@
 package common;
 
+import shopping.OrderService;
+
+import java.util.Calendar;
+
 public class AnOrdinaryClassWithBlock {
     private int i;
 
-    public static int j;
+    static int j;
+
+    public static AnOrdinaryClass anOrdinaryClass;
 
     {
         i = 1;
@@ -13,6 +19,10 @@ public class AnOrdinaryClassWithBlock {
     static {
         j = 2;
         System.out.println("j is 2");
+
+        anOrdinaryClass = new AnOrdinaryClass();
+        System.out.println("init AnOrdinaryClass()");
+
     }
 
     public AnOrdinaryClassWithBlock(int i) {
