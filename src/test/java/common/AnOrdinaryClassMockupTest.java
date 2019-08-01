@@ -28,17 +28,19 @@ public class AnOrdinaryClassMockupTest {
     @Test
     public void testPrivate2() {
 
-        class MockAnOrdinary extends MockUp<AnOrdinaryClass>{
+        class MockAnOrdinary extends MockUp<AnOrdinaryClass> {
+
             @Mock
             private int privateMethod() {
                 return 60;
             }
         }
-        new MockAnOrdinary();
+        new MockAnOrdinary();//这里需要额外调用一次以触发mockup生效
 
         AnOrdinaryClass instance = new AnOrdinaryClass();
 
         // private方法被mock了
         assertTrue(instance.callPrivateMethod() == 60);
     }
+
 }

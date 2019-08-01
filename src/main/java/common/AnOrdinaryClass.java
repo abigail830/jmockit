@@ -2,6 +2,12 @@ package common;
 
 public class AnOrdinaryClass {
 
+    private static int i;
+
+    static {
+        i = 4;
+    }
+
     public static int staticMethod() {
         return 1;
     }
@@ -15,7 +21,7 @@ public class AnOrdinaryClass {
     }
 
     private int privateMethod() {
-        return 4;
+        return i;
     }
 
     public int callPrivateMethod() {
